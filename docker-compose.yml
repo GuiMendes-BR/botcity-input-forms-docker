@@ -1,0 +1,13 @@
+services:
+  bot:
+    build:
+      context: .
+      shm_size: '1g'
+    shm_size: '1g'
+    privileged: true
+    user: 'bot'
+    # container_name: telegram-instagram-forwarder
+    ports:
+      - 5900:5900
+    volumes:
+      - .:/code
